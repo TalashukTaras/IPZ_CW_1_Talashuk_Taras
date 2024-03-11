@@ -103,7 +103,39 @@ fun GreetingCard(modifier: Modifier = Modifier) {
                         .size(30.dp)
 
                 )
+                Text(
+                    text = "+00 (00) 000 000"
+                )
+            }
+            Row (
+                modifier = modifier
+                    .fillMaxWidth(),
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Image(painter = painterResource(id = R.drawable.ic_launcher_background),
+                    contentDescription = "image",
+                    modifier = Modifier
+                        .size(30.dp)
 
+                )
+                Text(
+                    text = "@socialmediahandle"
+                )
+            }
+            Row (
+                modifier = modifier
+                    .fillMaxWidth(),
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Image(painter = painterResource(id = R.drawable.ic_launcher_background),
+                    contentDescription = "image",
+                    modifier = Modifier
+                        .size(30.dp)
+
+                )
+                Text(
+                    text = "email@domail.com"
+                )
             }
         }
 
