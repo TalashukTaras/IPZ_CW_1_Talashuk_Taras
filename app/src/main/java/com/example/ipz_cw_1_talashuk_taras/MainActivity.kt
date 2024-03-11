@@ -8,10 +8,12 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -50,6 +52,7 @@ fun GreetingCard(modifier: Modifier = Modifier) {
             .fillMaxSize()
             .padding(16.dp),
         verticalArrangement = Arrangement.Center,
+
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         // Перша вкладена колона з картинкою, заголовком і підзаголовком
@@ -88,28 +91,35 @@ fun GreetingCard(modifier: Modifier = Modifier) {
 
         }
         Column(
-            modifier = Modifier.fillMaxWidth(),
-            verticalArrangement = Arrangement.Bottom,
+            modifier = Modifier
+                .width(400.dp)
+                .fillMaxWidth(),
+            verticalArrangement = Arrangement.Center,
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Row (
                 modifier = modifier
                     .fillMaxWidth(),
+                horizontalArrangement = Arrangement.Center,
                 verticalAlignment = Alignment.CenterVertically
+
             ) {
                 Image(painter = painterResource(id = R.drawable.ic_launcher_background),
                     contentDescription = "image",
                     modifier = Modifier
                         .size(30.dp)
 
+
                 )
                 Text(
                     text = "+00 (00) 000 000"
+
                 )
             }
             Row (
                 modifier = modifier
                     .fillMaxWidth(),
+                horizontalArrangement = Arrangement.Center,
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 Image(painter = painterResource(id = R.drawable.ic_launcher_background),
@@ -125,6 +135,7 @@ fun GreetingCard(modifier: Modifier = Modifier) {
             Row (
                 modifier = modifier
                     .fillMaxWidth(),
+                horizontalArrangement = Arrangement.Center,
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 Image(painter = painterResource(id = R.drawable.ic_launcher_background),
