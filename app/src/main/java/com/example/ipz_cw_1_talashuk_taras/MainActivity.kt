@@ -7,6 +7,7 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -60,7 +61,7 @@ fun GreetingCard(modifier: Modifier = Modifier) {
 
             Image(
                 painter = painterResource(id = R.drawable.ic_launcher_background),
-                contentDescription = null,
+                contentDescription = "Image",
                 modifier = Modifier
                     .size(100.dp)
 
@@ -85,12 +86,26 @@ fun GreetingCard(modifier: Modifier = Modifier) {
                         .padding(top = 20.dp)
                 )
 
-
-
-
-
         }
+        Column(
+            modifier = Modifier.fillMaxWidth(),
+            verticalArrangement = Arrangement.Bottom,
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            Row (
+                modifier = modifier
+                    .fillMaxWidth(),
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Image(painter = painterResource(id = R.drawable.ic_launcher_background),
+                    contentDescription = "image",
+                    modifier = Modifier
+                        .size(30.dp)
 
+                )
+
+            }
+        }
 
     }
 }
